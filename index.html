@@ -15,27 +15,93 @@ body {
     line-height: 1.7;
 }
 
+/* Header */
 header {
-    background: url("https://images.unsplash.com/photo-1482192596544-9eb780fc7f66") center/cover no-repeat;
+    position: relative;
+    background: url("ChatGPT Image Feb 3, 2026, 08_03_39 PM.png") center/cover no-repeat;
     height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-header div {
-    background: rgba(0,0,0,0.55);
-    padding: 40px;
     color: white;
-    text-align: center;
-    max-width: 700px;
+    overflow: hidden;
+}
+.header-container {
+    text-align:center;
+    background: rgba(0,0,0,0.55);
+    padding:40px;
+    border-radius:15px;
+    position:relative;
+    max-width:700px;
+}
+.header-container h1 {
+    font-size:3em;
+    margin-bottom:15px;
+}
+.header-container p {
+    font-size:1.2em;
 }
 
-header h1 {
-    font-size: 3em;
-    margin-bottom: 15px;
+/* Hamburger Button */
+.hamburger {
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:30px;
+    height:22px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    cursor:pointer;
+    z-index:1100;
+}
+.hamburger div {
+    height:4px;
+    background:white;
+    border-radius:2px;
+    transition: all 0.3s ease;
 }
 
+/* Hamburger animiert zu X */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Sidebar Menü */
+#sideMenu {
+    position:fixed;
+    top:0;
+    right:-250px; /* versteckt */
+    width:250px;
+    height:100%;
+    background:#0a1f33;
+    display:flex;
+    flex-direction:column;
+    padding-top:60px;
+    transition: right 0.3s ease;
+    z-index:1000;
+}
+#sideMenu a {
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    font-size:1.2em;
+    transition: background 0.2s;
+}
+#sideMenu a:hover {
+    background:#13325c;
+}
+#sideMenu.open {
+    right:0;
+}
+
+/* Rest deiner Styles */
 section {
     max-width: 1100px;
     margin: 80px auto;
@@ -86,11 +152,32 @@ footer {
 <body>
 
 <header>
-    <div>
-        <h1>Eisbohrkerne</h1>
-        <p>Wie Eis als Klimaarchiv der Erde dient</p>
+  <div class="header-container">
+    <h1>Eisbohrkerne</h1>
+    <p>Wie Eis als Klimaarchiv der Erde dient</p>
+
+    <!-- Hamburger Button -->
+    <div class="hamburger" onclick="toggleMenu(this)">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
+  </div>
+
+  <!-- Sidebar Menü -->
+  <nav id="sideMenu">
+    <a href="index.html">Startseite</a>
+    <a href="standorte.html">Standorte</a>
+    <a href="klima-daten.html">Klimadaten</a>
+  </nav>
 </header>
+
+<script>
+function toggleMenu(btn) {
+    document.getElementById("sideMenu").classList.toggle("open");
+    btn.classList.toggle("active");
+}
+</script>
 
 <section>
     <h2>Einführung</h2>
