@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Eisbohrkerne – Klimaarchive der Erde</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: #1c2a3a;
+    background: #f5f8fb;
+    line-height: 1.7;
+}
+
+/* Header */
+header {
+    position: relative;
+    background: url("ChatGPT Image Feb 3, 2026, 08_03_39 PM.png") center/cover no-repeat;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+.header-container {
+    text-align:center;
+    background: rgba(0,0,0,0.55);
+    padding:40px;
+    border-radius:15px;
+    position:relative;
+    max-width:700px;
+}
+.header-container h1 {
+    font-size:3em;
+    margin-bottom:15px;
+}
+.header-container p {
+    font-size:1.2em;
+}
+
+/* Hamburger Button */
+.hamburger {
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:30px;
+    height:22px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    cursor:pointer;
+    z-index:1100;
+}
+.hamburger div {
+    height:4px;
+    background:white;
+    border-radius:2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger animiert zu X */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Sidebar Menü */
+#sideMenu {
+    position:fixed;
+    top:0;
+    right:-250px; /* versteckt */
+    width:250px;
+    height:100%;
+    background:#0a1f33;
+    display:flex;
+    flex-direction:column;
+    padding-top:60px;
+    transition: right 0.3s ease;
+    z-index:1000;
+}
+#sideMenu a {
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    font-size:1.2em;
+    transition: background 0.2s;
+}
+#sideMenu a:hover {
+    background:#13325c;
+}
+#sideMenu.open {
+    right:0;
+}
+
+/* Rest deiner Styles */
+section {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #0a4c78;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.image-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.image-text img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+footer {
+    background: #0a1f33;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    font-size: 0.9em;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>Eisbohrkerne</h1>
+    <p>Wie Eis als Klimaarchiv der Erde dient</p>
+
+    <!-- Hamburger Button -->
+    <div class="hamburger" onclick="toggleMenu(this)">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- Sidebar Menü -->
+  <nav id="sideMenu">
+    <a href="index.html">Startseite</a>
+    <a href="standorte.html">Standorte</a>
+    <a href="klima-daten.html">Klimadaten</a>
+  </nav>
+</header>
+
+<script>
+function toggleMenu(btn) {
+    document.getElementById("sideMenu").classList.toggle("open");
+    btn.classList.toggle("active");
+}
+</script>
+
+<section>
+    <h2>Einführung</h2>
+    <p>
+        Eisbohrkerne sind eines der wichtigsten Werkzeuge der Klimaforschung.
+        Sie ermöglichen es Wissenschaftlerinnen und Wissenschaftlern,
+        das Klima der Vergangenheit über hunderttausende Jahre hinweg zu rekonstruieren.
+    </p>
+</section>
+
+<section class="image-text">
+    <img src="ChatGPT Image Feb 3, 2026, 05_46_58 PM.png">
+    <div>
+        <h2>Was sind Eisbohrkerne?</h2>
+        <p>
+            Eisbohrkerne sind zylinderförmige Eisproben, die aus Gletschern
+            oder den Eisschilden der Antarktis und Grönlands gewonnen werden.
+            Jede Schicht entspricht einem bestimmten Zeitabschnitt.
+        </p>
+        <p>
+            Manche Eisbohrkerne reichen bis zu <b>2.700.000 Jahre</b> in die Vergangenheit.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Was speichern Eisbohrkerne?</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Isotopen</h3>
+            <p>Isotopenverhältnisse im Eis geben Auskunft über frühere Temperaturen.</p>
+        </div>
+        <div class="card">
+            <h3>Antike Luftblasen</h3>
+            <p>Luftblasen enthalten CO₂ und Methan aus der Vergangenheit, sie geben auskunft über die frühere Atmosphäre</p>
+        </div>
+        <div class="card">
+            <h3>Fremdkörper</h3>
+            <p>Können auskunft über Dürrezeiten etc. geben</p>
+        </div>
+    </div>
+</section>
+
+<section class="image-text">
+    <div>
+        <h2>Bedeutung für den Klimawandel</h2>
+        <p>
+            Eisbohrkerne zeigen eindeutig, dass der heutige CO₂-Gehalt
+            höher ist als in allen bekannten natürlichen Klimaschwankungen.
+        </p>
+        <p>
+            Der schnelle Anstieg ist ein klarer Beleg für den
+            vom Menschen verursachten Klimawandel.
+        </p>
+    </div>
+</section>
+
+<footer>
+    Forschungswoche der Klassen 7<br>
+    Gemacht von: Elias Gallathe, Klasse 7b
+</footer>
+
+</body>
+</html>

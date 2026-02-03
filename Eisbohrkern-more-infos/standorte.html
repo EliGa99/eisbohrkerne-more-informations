@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eisbohrkerne weltweit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f5f8fb;
+            color: #1c2a3a;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        header {
+            background: url("ChatGPT Image Feb 3, 2026, 08_03_39 PM.png") center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header div {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #0a4c78;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #7fd7ff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card iframe {
+            width: 100%;
+            height: 200px;
+            border: 0;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            color: #0a4c78;
+        }
+
+        .card-content p {
+            margin-bottom: 0;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background: #0a1f33;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #7fd7ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>Eisbohrkerne weltweit</h1>
+            <p>Ein Blick auf die wichtigsten Bohrstandorte der Erde</p>
+        </div>
+    </header>
+
+    <section>
+        <h2>Bohrstandorte</h2>
+        <div class="card-container">
+            <!-- Grönland -->
+            <div class="card">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-73.0%2C59.0%2C-12.0%2C84.0&layer=mapnik&marker=72.0%2C-40.0"></iframe>
+                <div class="card-content">
+                    <h3>Grönland</h3>
+                    <p>Grönland hat einige der ältesten und dicksten Eisschichten der Erde. Diese Kerne liefern
+                        wertvolle Daten über das Klima der letzten 120.000 Jahre.</p>
+                </div>
+            </div>
+
+            <!-- Antarktis -->
+            <div class="card">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-180.0%2C-90.0%2C180.0%2C-60.0&layer=mapnik&marker=-75.0%2C-0.0"></iframe>
+                <div class="card-content">
+                    <h3>Antarktis</h3>
+                    <p>Die Antarktis liefert Eisbohrkerne, die über 800.000 Jahre in die Vergangenheit reichen und
+                        einzigartige Einblicke in das Klima geben.</p>
+                </div>
+            </div>
+
+            <!-- EPICA Projekt -->
+            <div class="card">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-72.0%2C-78.0%2C-68.0%2C-74.0&layer=mapnik&marker=-75.0%2C-70.0"></iframe>
+                <div class="card-content">
+                    <h3>EPICA Projekt</h3>
+                    <p>EPICA (European Project for Ice Coring in Antarctica) liefert hochauflösende Daten über
+                        Temperatur, Treibhausgase und Vulkanausbrüche der letzten 800.000 Jahre.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Zurück zur <a href="index.html">Startseite</a> | Forschungswoche der Klassen 7 | Gemacht von Elias Gallathe,
+        Klasse 7b
+    </footer>
+
+</body>
+
+</html>

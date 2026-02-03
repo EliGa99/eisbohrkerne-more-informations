@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Klimadaten aus Eisbohrkernen</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+body { margin:0; font-family:"Inter", sans-serif; color:#1c2a3a; background:#f5f8fb; line-height:1.7; }
+header {
+    position: relative;
+    background: url("ChatGPT Image Feb 3, 2026, 08_03_39 PM.png") center/cover no-repeat;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+.header-container {
+    text-align:center;
+    background: rgba(0,0,0,0.55);
+    padding:40px;
+    border-radius:15px;
+    position:relative;
+    max-width:700px;
+}
+.header-container h1 {
+    font-size:3em;
+    margin-bottom:15px;
+}
+.header-container p {
+    font-size:1.2em;
+}
+
+/* Hamburger Button */
+.hamburger {
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:30px;
+    height:22px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    cursor:pointer;
+    z-index:1100;
+}
+.hamburger div {
+    height:4px;
+    background:white;
+    border-radius:2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger animiert zu X */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Sidebar Menü */
+#sideMenu {
+    position:fixed;
+    top:0;
+    right:-250px; /* versteckt */
+    width:250px;
+    height:100%;
+    background:#0a1f33;
+    display:flex;
+    flex-direction:column;
+    padding-top:60px;
+    transition: right 0.3s ease;
+    z-index:1000;
+}
+#sideMenu a {
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    font-size:1.2em;
+    transition: background 0.2s;
+}
+#sideMenu a:hover {
+    background:#13325c;
+}
+#sideMenu.open {
+    right:0;
+}
+section { max-width:1100px; margin:50px auto; padding:0 20px; }
+h2 { font-size:2em; color:#0a4c78; margin-bottom:20px; }
+table { width:100%; border-collapse:collapse; margin-bottom:40px; }
+th, td { border:1px solid #ccc; padding:10px; text-align:center; }
+th { background:#0a4c78; color:white; }
+tr:nth-child(even) { background:#eaf0f6; }
+footer { background:#0a1f33; color:white; padding:40px; text-align:center; font-size:0.9em; }
+
+/* Hamburger & Sidebar kopieren vom index.html */
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>Klimadaten aus Eisbohrkernen</h1>
+    <p>Historische Temperaturen und CO₂-Konzentrationen</p>
+
+    <div class="hamburger" onclick="toggleMenu(this)">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <nav id="sideMenu">
+    <a href="index.html">Startseite</a>
+    <a href="unterseite_weltkarte.html">Weltkarte</a>
+    <a href="klima-daten.html">Klimadaten</a>
+  </nav>
+</header>
+
+<script>
+function toggleMenu(btn){
+    document.getElementById("sideMenu").classList.toggle("open");
+    btn.classList.toggle("active");
+}
+</script>
+
+<section>
+    <h2>Einführung</h2>
+    <p>
+        Eisbohrkerne enthalten Informationen über das Klima der Erde aus den letzten hunderttausenden Jahren.
+        Forscher können Temperaturen, CO₂- und Methankonzentrationen aus den eingeschlossenen Luftblasen messen.
+    </p>
+</section>
+
+<section>
+    <h2>Temperaturen und CO₂ aus Eisbohrkernen</h2>
+    <p>Die Tabelle zeigt historische Werte aus dem EPICA-Dome C Eisbohrkern (Antarktis) der letzten 800.000 Jahre:</p>
+
+    <table>
+        <tr>
+            <th>Jahre vor heute</th>
+            <th>CO₂ (ppm)</th>
+            <th>Temperaturabweichung (°C)</th>
+        </tr>
+        <tr><td>0</td><td>415</td><td>0</td></tr>
+        <tr><td>20.000</td><td>190</td><td>-6</td></tr>
+        <tr><td>60.000</td><td>230</td><td>-3</td></tr>
+        <tr><td>120.000</td><td>280</td><td>1</td></tr>
+        <tr><td>200.000</td><td>200</td><td>-4</td></tr>
+        <tr><td>400.000</td><td>260</td><td>2</td></tr>
+        <tr><td>600.000</td><td>190</td><td>-5</td></tr>
+        <tr><td>800.000</td><td>180</td><td>-6</td></tr>
+    </table>
+
+   <p>Quelle: <a href="https://www.ncdc.noaa.gov/paleo-search/study/17955" target="_blank">EPICA Dome C – Ice Core Data</a></p>
+
+</section>
+
+<footer>
+    Forschungswoche der Klassen 7<br>
+    Gemacht von: Elias Gallathe, Klasse 7b
+</footer>
+
+</body>
+</html>
